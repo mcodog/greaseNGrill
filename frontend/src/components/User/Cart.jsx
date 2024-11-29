@@ -48,7 +48,11 @@ const Cart = () => {
             cart.map((item, index) => (
               <div key={index} className="cart-item">
                 <div className="checkbox"><input type="checkbox" /></div>
-                <div className="image-container"></div>
+                <div className="image">
+                  <div className="img-container">
+                    <img className='rounded' src="https://placehold.co/600x400" alt="" />
+                  </div>
+                </div>
                 <div className="product-details">{item.productId.title}</div>
                 <div className="price">$ {item.productId.price}</div>
                 <div className="quantity">{item.quantity}</div>

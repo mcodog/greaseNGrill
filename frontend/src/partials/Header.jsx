@@ -3,7 +3,7 @@ import '../styles/Header.css'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext';
 import axiosInstance from '../utils/AxiosInstance';
-
+import logo from '../assets/logo.jpg'
 
 const Header = () => {
   const { isAuthenticated, isAdmin } = useAuth();
@@ -24,8 +24,12 @@ const Header = () => {
   return (
     <header className='custom-header'>
       <nav className='custom-nav'>
-        <div className="logo-container">
-          <Link to="/">Main Logo</Link>
+        <div className="main-nav">
+          <Link to="/">
+            <div className="logo-container">
+              <img src={logo} alt="main-logo" />
+            </div>
+          </Link>
         </div>
         <div className="main-navigation">
           <Link to="/">Home</Link>
